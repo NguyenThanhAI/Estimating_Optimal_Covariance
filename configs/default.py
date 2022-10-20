@@ -104,7 +104,7 @@ def get_train_config(**hparams):
     config.training = training = ml_collections.ConfigDict()
     training.n_ckpts = hparams.get('n_ckpts', 50)
     training.n_its = hparams.get('n_its', 500000)
-    training.batch_size = hparams.get('batch_size', 128)
+    training.batch_size = hparams.get('batch_size', 16)
 
     config.ema = ema = ml_collections.ConfigDict()
     ema.rate = hparams.get('ema_rate', 0.9999)
